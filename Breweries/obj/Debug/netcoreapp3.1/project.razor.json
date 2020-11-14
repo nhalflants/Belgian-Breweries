@@ -14397,6 +14397,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/Pages/Breweries/NotFound.cshtml",
+      "TargetPath": "Pages\\Breweries\\NotFound.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/Pages/Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
       "FileKind": "mvc"

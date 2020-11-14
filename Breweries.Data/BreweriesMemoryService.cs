@@ -59,5 +59,10 @@ namespace Breweries.Data
             //     .OrderBy(b => b.Name)
             //     .AsEnumerable();
         }
+
+        public Brewery GetBreweryById(int id)
+        {
+            return breweries.SingleOrDefault(b => b.Id == id);
+        }
     }
 }

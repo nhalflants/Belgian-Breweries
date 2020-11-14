@@ -8,5 +8,6 @@ namespace Breweries.Data
     {
         IEnumerable<Brewery> GetBreweries();
         IEnumerable<Brewery> GetBreweriesByName(string name);
+        Brewery GetBreweryById(int id);
     }
 }
