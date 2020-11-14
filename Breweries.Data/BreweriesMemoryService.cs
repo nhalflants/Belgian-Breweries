@@ -64,5 +64,22 @@ namespace Breweries.Data
         {
             return breweries.SingleOrDefault(b => b.Id == id);
         }
+
+        public int Save()
+        {
+            return 0;
+        }
+
+        public Brewery Update(Brewery brewery)
+        {
+            Brewery brew = breweries.SingleOrDefault(b => b.Id == brewery.Id);
+            if (brew != null)
+            {
+                brew.Name = brewery.Name;
+                brew.Description = brewery.Description;
+                brew.Province = brewery.Province;
+            }
+            return brew;
+        }
     }
 }

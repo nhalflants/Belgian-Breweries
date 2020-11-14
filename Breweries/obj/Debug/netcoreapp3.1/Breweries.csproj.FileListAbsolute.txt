@@ -224,3 +224,4 @@
 /Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/obj/Debug/netcoreapp3.1/Breweries.dll
 /Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/obj/Debug/netcoreapp3.1/Breweries.pdb
 /Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/obj/Debug/netcoreapp3.1/Breweries.genruntimeconfig.cache
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries/obj/Debug/netcoreapp3.1/Razor/Pages/Breweries/Edit.cshtml.g.cs

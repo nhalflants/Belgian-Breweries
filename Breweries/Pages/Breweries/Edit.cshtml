@@ -1,8 +1,26 @@
-@page
+@page "{breweryId:int}"
 @model EditModel
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit @Model.Brewery.Name</h1>
 
+<form method="post">
+    <input type="hidden" asp-for="Brewery.Id" />
+    <div class="form-group">
+        <label asp-for="Brewery.Name"></label>
+        <input asp-for="Brewery.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Brewery.Description"></label>
+        <input asp-for="Brewery.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Brewery.Province"></label>
+        <select asp-for="Brewery.Province" class="form-control"
+            asp-items="Model.Provinces">
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

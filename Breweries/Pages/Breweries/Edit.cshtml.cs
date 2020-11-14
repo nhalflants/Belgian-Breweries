@@ -6,21 +6,40 @@ using Breweries.Core;
 using Breweries.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Breweries.Pages.Breweries
 {
     public class EditModel : PageModel
     {
         private readonly IBreweriesService breweriesService;
-        public Brewery Brewery { get; set; }
+        private readonly IHtmlHelper htmlHelper;
 
-        public EditModel(IBreweriesService breweriesService)
+        [BindProperty]
+        public Brewery Brewery { get; set; }
+        public IEnumerable<SelectListItem> Provinces { get; set; }
+
+        public EditModel(IBreweriesService breweriesService,
+            IHtmlHelper htmlHelper)
         {
             this.breweriesService = breweriesService;
+            this.htmlHelper = htmlHelper;
         }
-        public void OnGet()
+        public IActionResult OnGet(int breweryId)
         {
+            Provinces = htmlHelper.GetEnumSelectList<Province>();
+            Brewery = breweriesService.GetBreweryById(breweryId);
+            if (Brewery == null)
+                return RedirectToPage("./NotFound");
+            return Page();
+        }
 
+        public IActionResult OnPost()
+        {
+            Provinces = htmlHelper.GetEnumSelectList<Province>();
+            breweriesService.Update(Brewery);
+            breweriesService.Save();
+            return Page();
         }
     }
 }
