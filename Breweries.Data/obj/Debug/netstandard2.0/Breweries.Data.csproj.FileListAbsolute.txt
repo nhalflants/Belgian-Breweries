@@ -1,0 +1,12 @@
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/bin/Debug/netstandard2.0/Breweries.Data.deps.json
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/bin/Debug/netstandard2.0/Breweries.Data.dll
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/bin/Debug/netstandard2.0/Breweries.Data.pdb
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/bin/Debug/netstandard2.0/Breweries.Core.dll
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/bin/Debug/netstandard2.0/Breweries.Core.pdb
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.csprojAssemblyReference.cache
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.AssemblyInfoInputs.cache
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.AssemblyInfo.cs
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.csproj.CoreCompileInputs.cache
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.csproj.CopyComplete
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.dll
+/Users/manaadvice/Documents/ASP.NET Core/Belgian Breweries/Breweries.Data/obj/Debug/netstandard2.0/Breweries.Data.pdb
