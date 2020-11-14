@@ -1,0 +1,37 @@
+@page
+@model ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Breweries</h1>
+
+<form action="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" 
+                asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var brewery in Model.Breweries)
+    {
+        <tr>
+            <td>@brewery.Name</td>
+            <td>@brewery.Province</td>
+            <td>
+                <a class="btn btn-lg"
+                    asp-page="./Detail" asp-route-breweryId="@brewery.Id">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+            </td>
+        </tr>
+    }
+</table>

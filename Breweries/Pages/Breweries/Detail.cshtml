@@ -1,0 +1,12 @@
+@page
+@model DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.Brewery.Name</h2>
+<div>
+    Website: @Model.Brewery.Website
+</div>
+
+<a asp-page="./List" class="btn btn-default">All Breweries</a>
