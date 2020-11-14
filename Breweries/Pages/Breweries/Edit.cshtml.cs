@@ -25,10 +25,15 @@ namespace Breweries.Pages.Breweries
             this.breweriesService = breweriesService;
             this.htmlHelper = htmlHelper;
         }
-        public IActionResult OnGet(int breweryId)
+        public IActionResult OnGet(int? breweryId)
         {
             Provinces = htmlHelper.GetEnumSelectList<Province>();
-            Brewery = breweriesService.GetBreweryById(breweryId);
+
+            if (breweryId.HasValue)
+                Brewery = breweriesService.GetBreweryById(breweryId.Value);
+            else 
+                Brewery = new Brewery();
+
             if (Brewery == null)
                 return RedirectToPage("./NotFound");
             return Page();
@@ -36,14 +41,25 @@ namespace Breweries.Pages.Breweries
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                Provinces = htmlHelper.GetEnumSelectList<Province>(); 
+                return Page();
+            }
+            if (Brewery.Id > 0)
             {
                 breweriesService.Update(Brewery);
-                breweriesService.Save();
-                return RedirectToPage("./Detail", new { breweryId = Brewery.Id });
+                TempData["Message"] = "Brewery saved";
             }
-            Provinces = htmlHelper.GetEnumSelectList<Province>(); 
-            return Page();
+            else 
+            {
+                breweriesService.Add(Brewery);
+                TempData["Message"] = "Brewery added";               
+            }
+            
+            breweriesService.Save();
+            return RedirectToPage("./Detail", new { breweryId = Brewery.Id });
+
         }
     }
 }

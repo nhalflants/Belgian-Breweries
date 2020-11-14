@@ -15,6 +15,8 @@ namespace Breweries.Pages.Breweries
         private readonly IBreweriesService breweriesService;
 
         public Brewery Brewery { get; set; }
+        [TempData]
+        public string Message { get; set; }
 
         public DetailModel(IBreweriesService breweriesService)
         {

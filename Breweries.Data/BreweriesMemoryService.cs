@@ -43,6 +43,13 @@ namespace Breweries.Data
             };
         }
 
+        public Brewery Add(Brewery brewery)
+        {
+            breweries.Add(brewery);
+            brewery.Id = breweries.Max(b => b.Id) + 1;
+            return brewery;
+        }
+
         public IEnumerable<Brewery> GetBreweries()
         {
             return breweries;

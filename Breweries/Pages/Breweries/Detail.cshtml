@@ -9,4 +9,9 @@
     Website: @Model.Brewery.Website
 </div>
 
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+
 <a asp-page="./List" class="btn btn-default">All Breweries</a>
