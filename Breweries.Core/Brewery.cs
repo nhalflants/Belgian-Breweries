@@ -7,7 +7,7 @@ namespace Breweries.Core
     public class Brewery
     {
         public int Id { get; set; }
-        [Required, StringLength(3)]
+        [Required]
         public string Name { get; set; }
         public Address Address { get; set; }
         public string Website { get; set; }

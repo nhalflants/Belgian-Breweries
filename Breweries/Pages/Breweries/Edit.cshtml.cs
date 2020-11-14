@@ -36,9 +36,13 @@ namespace Breweries.Pages.Breweries
 
         public IActionResult OnPost()
         {
-            Provinces = htmlHelper.GetEnumSelectList<Province>();
-            breweriesService.Update(Brewery);
-            breweriesService.Save();
+            if (ModelState.IsValid)
+            {
+                breweriesService.Update(Brewery);
+                breweriesService.Save();
+                return RedirectToPage("./Detail", new { breweryId = Brewery.Id });
+            }
+            Provinces = htmlHelper.GetEnumSelectList<Province>(); 
             return Page();
         }
     }

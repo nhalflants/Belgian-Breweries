@@ -11,16 +11,19 @@
     <div class="form-group">
         <label asp-for="Brewery.Name"></label>
         <input asp-for="Brewery.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Brewery.Name"></span>
     </div>
     <div class="form-group">
         <label asp-for="Brewery.Description"></label>
         <input asp-for="Brewery.Description" class="form-control" />
+        <span class="text-danger" asp-validation-for="Brewery.Description"></span>
     </div>
     <div class="form-group">
         <label asp-for="Brewery.Province"></label>
         <select asp-for="Brewery.Province" class="form-control"
             asp-items="Model.Provinces">
         </select>
+        <span class="text-danger" asp-validation-for="Brewery.Province"></span>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
