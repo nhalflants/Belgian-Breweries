@@ -6,6 +6,7 @@ using Breweries.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +25,10 @@ namespace Breweries
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<BreweriesDbContext>(options =>
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString("BreweriesDb"));
+                });
             services.AddSingleton<IBreweriesService, BreweriesMemoryService>();
             services.AddRazorPages();
         }
