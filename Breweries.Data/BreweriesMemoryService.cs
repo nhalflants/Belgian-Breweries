@@ -50,6 +50,16 @@ namespace Breweries.Data
             return brewery;
         }
 
+        public Brewery Delete(int breweryId)
+        {
+            var brewery = breweries.FirstOrDefault(b => b.Id == breweryId);
+            if (brewery != null)
+            {
+                breweries.Remove(brewery);
+            }
+            return brewery;
+        }
+
         public IEnumerable<Brewery> GetBreweries()
         {
             return breweries;

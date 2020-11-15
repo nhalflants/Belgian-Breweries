@@ -11,6 +11,7 @@ namespace Breweries.Data
         Brewery GetBreweryById(int id);
         Brewery Add(Brewery brewery);
         Brewery Update(Brewery brewery);
+        Brewery Delete(int breweryId);
         int Save();
     }
 }

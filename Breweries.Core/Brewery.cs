@@ -6,6 +6,7 @@ namespace Breweries.Core
 {
     public class Brewery
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }

@@ -29,7 +29,7 @@ namespace Breweries
                 {
                     options.UseSqlServer(Configuration.GetConnectionString("BreweriesDb"));
                 });
-            services.AddSingleton<IBreweriesService, BreweriesMemoryService>();
+            services.AddScoped<IBreweriesService, BreweriesService>();
             services.AddRazorPages();
         }
 
