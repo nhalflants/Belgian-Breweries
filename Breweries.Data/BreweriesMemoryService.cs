@@ -82,6 +82,11 @@ namespace Breweries.Data
             return breweries.SingleOrDefault(b => b.Id == id);
         }
 
+        public int GetCountOfBreweries()
+        {
+            return breweries.Count;
+        }
+
         public int Save()
         {
             return 0;

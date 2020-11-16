@@ -46,6 +46,11 @@ namespace Breweries.Data
             return dbContext.Breweries.Find(id);
         }
 
+        public int GetCountOfBreweries()
+        {
+            return dbContext.Breweries.Count();
+        }
+
         public int Save()
         {
             return dbContext.SaveChanges();
